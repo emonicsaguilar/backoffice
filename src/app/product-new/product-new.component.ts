@@ -46,7 +46,7 @@ export class ProductNewComponent implements OnInit {
     this.productsService
       .addProduct(newProduct)
       .pipe(first())
-      .subscribe(() => this.router.navigate(['products'] ));
+      .subscribe(() => this.router.navigate(['products']));
 
   }
 
