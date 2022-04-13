@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { LoginComponent } from './auth/login/login.component';
+import { MovieComponent } from './movie/movie.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductDetailComponent,
+  },
+  {
+    path: 'movie',
+    component: MovieComponent,
   },
   {
     path: '**',

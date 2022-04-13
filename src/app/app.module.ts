@@ -13,6 +13,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { LoginComponent } from './auth/login/login.component';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ServerErrorInterceptor } from './_helpers';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ServerErrorInterceptor } from './_helpers';
     ProductDetailComponent,
     ProductNewComponent,
     ProductEditComponent,
-    LoginComponent
+    LoginComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
