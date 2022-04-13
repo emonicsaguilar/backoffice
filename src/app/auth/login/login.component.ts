@@ -10,7 +10,9 @@ import { AuthService } from '../../_services/auth.service';
 })
 export class LoginComponent implements OnInit {
   formLoginGroup: FormGroup;
-
+  username='';
+  password='';
+  errorMsg: string = null;
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
@@ -18,17 +20,24 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.formLoginGroup = this.formBuilder.group({
-      txtUsername: ['', Validators.required],
-      txtPassword: ['', Validators.required],
-    });
   }
 
   onSubmit() {
-    const { txtUsername, txtPassword } = this.formLoginGroup.value;
-    this.authService.login(txtUsername, txtPassword).subscribe((credentials) => {
+    const username = this.username.trim();
+    const password = this.password.trim();
+    this.errorMsg = null;
+    if (username.length === 0) {
+      this.errorMsg = 'The username not be empty';
+    }
+    if (password.length < 6) {
+      this.errorMsg = 'The password should be at least 6 characters long';
+    }
+    if (this.errorMsg) {
+      return;
+    }
+    this.authService.login(username, password).subscribe((credentials) => {
       if (credentials.jwt) {
-        this.router.navigate(['products']);
+        this.router.navigate(['home']);
       }
     });
   }

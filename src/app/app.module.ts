@@ -14,6 +14,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ServerErrorInterceptor } from './_helpers';
 import { MovieComponent } from './movie/movie.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { MovieComponent } from './movie/movie.component';
     ProductNewComponent,
     ProductEditComponent,
     LoginComponent,
-    MovieComponent
+    MovieComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,7 @@ import { MovieComponent } from './movie/movie.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule,
     // BrowserAnimationsModule,
     // ToastrModule.forRoot()
   ],

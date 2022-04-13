@@ -3,11 +3,12 @@ import { Movie } from '../_models';
 import { MoviesService } from '../_services';
 
 @Component({
-  selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class MovieComponent implements OnInit {
+export class HomeComponent implements OnInit {
+
   movies: Movie[] = [];
   errorMsg = '';
   constructor(

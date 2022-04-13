@@ -977,6 +977,13 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@ng-bootstrap/ng-bootstrap@^12.0.2":
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-12.0.2.tgz#f8c2c62a526d9a017573ee21f11e3d289bb89f54"
+  integrity sha512-Dvd95VtJe5a/rxgQlI0QFX1OJ3I1MM484+VJMA1P2ETq/hgT44ypFI/pIiO+KcHV76IX5SjGKSRNiWNi+shnaA==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngtools/webpack@8.3.29":
   version "8.3.29"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.29.tgz#7b6984cdccd633dd687e9413a89a2d9e1360f76c"
@@ -1024,6 +1031,11 @@
   dependencies:
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
+
+"@popperjs/core@^2.11.5":
+  version "2.11.5"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
+  integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
 
 "@schematics/angular@8.3.29":
   version "8.3.29"
@@ -5473,8 +5485,6 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
-
-
 
 nice-try@^1.0.4:
   version "1.0.5"

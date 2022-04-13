@@ -1,0 +1,36 @@
+
+<div class="home-container">
+    <div class="all-movies">
+        <div class="trending-movies">
+            <div class="top">
+                <h4>Trending Movies</h4>
+                <div class="view-all">View all</div>
+            </div>
+            <div class="movies-thumbnail">
+                <div class="movie" *ngFor="let movie of movies">
+                    <div class="cover">
+                        <img src="http://localhost:1337{{movie.attributes.image.data.attributes.formats.thumbnail.url}}" alt="" />
+                    </div>
+                    <div class="detail">
+                        <div class="name">{{movie.attributes.name}}</div>
+                        <div class="rating">
+                            {{movie.attributes.rating}}
+                            <ng-template #t let-fill="fill">
+                              <span class="star" [class.full]="fill === 100">
+                                <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                              </span>
+                            </ng-template>
+                            
+                            <ngb-rating [(rate)]="movie.attributes.rating" [starTemplate]="t" [readonly]="true" [max]="5">
+                                
+                            </ngb-rating>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-movies"></div>
+</div>

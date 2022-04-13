@@ -7,7 +7,7 @@ import { ProductNewComponent } from './product-new/product-new.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { LoginComponent } from './auth/login/login.component';
 import { MovieComponent } from './movie/movie.component';
-
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'movie',
     component: MovieComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: '**',
