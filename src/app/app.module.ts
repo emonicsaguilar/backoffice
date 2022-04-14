@@ -16,7 +16,6 @@ import { ServerErrorInterceptor } from './_helpers';
 import { MovieComponent } from './movie/movie.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbModule,
     // BrowserAnimationsModule,
     // ToastrModule.forRoot()
   ],

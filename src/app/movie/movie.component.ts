@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../_models';
 import { MoviesService } from '../_services';
 
@@ -8,15 +9,23 @@ import { MoviesService } from '../_services';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-  movies: Movie[] = [];
-  errorMsg = '';
+  movie: Movie;
+  id: number;
+  type: string;
   constructor(
+    private route: ActivatedRoute,
+    private router: Router,
     private moviesService: MoviesService,
   ) { }
 
   ngOnInit() {
-    this.moviesService.getAll().subscribe((response) => {
-      return this.movies = response.data;
+    this.route.params.subscribe(params => {
+      this.id = params.id;
+      this.type = params.type;
+    });
+
+    this.moviesService.show(String(this.id)).subscribe((response) => {
+      return this.movie = response.data;
 
     });
   }

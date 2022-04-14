@@ -34,7 +34,7 @@ export class MoviesService {
   }
 
   public show(id: string): Observable<ResponseMovieDetail> {
-    return this.http.get<ResponseMovieDetail>(`${host}/movies/${id}`);
+    return this.http.get<ResponseMovieDetail>(`${host}/movies/${id}?populate=image,reviews`);
   }
 
   public addMovie(data: NewMovie): Observable<ResponseMovie> {

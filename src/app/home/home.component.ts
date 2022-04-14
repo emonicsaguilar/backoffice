@@ -8,7 +8,7 @@ import { MoviesService } from '../_services';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  moviesTheater: Movie[] = [];
   movies: Movie[] = [];
   errorMsg = '';
   constructor(
@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.moviesService.getAll().subscribe((response) => {
-      return this.movies = response.data;
+      this.moviesTheater = response.data.filter((movie) => !movie.attributes.popular);
+      return this.movies = response.data.filter((movie) => movie.attributes.popular);
 
     });
   }

@@ -31,7 +31,7 @@ const routes: Routes = [
     component: ProductDetailComponent,
   },
   {
-    path: 'movie',
+    path: 'movie/:type/:id',
     component: MovieComponent,
   },
   {
