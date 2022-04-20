@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { NewProduct, Product, ProductAttributes } from '../_models';
 import { environment } from '../../environments/environment';
-import { CombineLatestOperator } from 'rxjs/internal/observable/combineLatest';
 import { visitAll } from '@angular/compiler';
 
 const host: string = environment.host;

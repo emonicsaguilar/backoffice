@@ -13,6 +13,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { LoginComponent } from './auth/login/login.component';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ServerErrorInterceptor } from './_helpers';
+import { ListAppointmentsComponent } from './list-appointments/list-appointments.component';
+import { CreateAppointmentsComponent } from './create-appointments/create-appointments.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ServerErrorInterceptor } from './_helpers';
     ProductDetailComponent,
     ProductNewComponent,
     ProductEditComponent,
-    LoginComponent
+    LoginComponent,
+    ListAppointmentsComponent,
+    CreateAppointmentsComponent
   ],
   imports: [
     BrowserModule,

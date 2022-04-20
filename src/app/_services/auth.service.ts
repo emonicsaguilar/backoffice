@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NewProduct, Product, ProductAttributes } from '../_models';
 import { environment } from '../../environments/environment';
-import { CombineLatestOperator } from 'rxjs/internal/observable/combineLatest';
 import { visitAll } from '@angular/compiler';
 const host: string = environment.host;
 
