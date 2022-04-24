@@ -1,1 +1,25 @@
-<p>create-appointments works!</p>
+<mat-toolbar *ngIf="successMsg" color="primary">{{ successMsg }}</mat-toolbar>
+<mat-toolbar *ngIf="errorMsg" color="warn">{{ errorMsg }}</mat-toolbar>
+
+<form [formGroup]="formGroup" class="form-container">
+  <mat-form-field>
+    <mat-label>Name:</mat-label>
+    <input matInput id="name" formControlName="name" placeholder="Ex. Hardik" />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Email:</mat-label>
+    <textarea matInput formControlName="email" id="email" placeholder="example@domine.com"></textarea>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Date:</mat-label>
+    <input matInput formControlName="date" id="date" [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+  </mat-form-field>
+
+  <button mat-raised-button (click)="onSubmit()" color="primary">Submit!</button>
+</form>
